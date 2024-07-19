@@ -1,0 +1,15 @@
+package com.example.demoSpring.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.example.demoSpring.common.Coach;
+import com.example.demoSpring.common.TennisCoach;
+
+@Configuration
+public class SportConfig {
+	@Bean
+	public Coach tennisCoach() {
+		return new TennisCoach();
+	}
+}

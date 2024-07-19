@@ -1,0 +1,33 @@
+package com.example.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.entity.User;
+import com.example.repository.UserRepository;
+import com.example.request.CreateUserRequest;
+import com.example.request.UpdateUserRequest;
+
+@Service
+public class UserService {
+
+	@Autowired
+	UserRepository userRepository;
+
+	public List<User> getAllUsers() {
+		return userRepository.findAll();
+	}
+	
+	public User createUser(CreateUserRequest createUserRequest) {
+		User user = new User(createUserRequest);
+		user = userRepository.save(user);
+		return user;
+	}
+	
+	public User updateUser(UpdateUserRequest updateUserRequest) {
+		User user = userRepository.findById(updateUserRequest.getId()).get();
+		
+	}
+}

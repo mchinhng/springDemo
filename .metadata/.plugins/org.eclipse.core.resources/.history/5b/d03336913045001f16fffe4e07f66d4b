@@ -1,0 +1,14 @@
+package com.example.demoSpring.common;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class BaseballCoach implements Coach {
+
+	@Override
+	public String getDailWorkout() {
+		// TODO Auto-generated method stub
+		return "baseball";
+	}
+
+}

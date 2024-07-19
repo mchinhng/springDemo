@@ -1,0 +1,6 @@
+package com.example.demoSpring;
+
+public interface Coach {
+	String getDailWorkout();
+
+}

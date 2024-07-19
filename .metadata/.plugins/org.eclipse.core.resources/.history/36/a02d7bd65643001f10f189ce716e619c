@@ -1,0 +1,22 @@
+#spring.application.name=demo
+#server.port=8081
+spring.datasource.url=jdbc:sqlserver://DESKTOP-JPU8UQS\\DATA:1433;databaseName=UserDb;integratedSecurity=true
+spring.datasource.username=myusername
+spring.datasource.password=mypassword
+spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.jpa.database=sql-server
+
+# Hibernate settings
+#spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.SQLServerDialect
+
+# Specify explicitly the dialect (here for PostgreSQL, adapt for your database)
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
+# Disable Hibernate usage of JDBC metadata
+spring.jpa.properties.hibernate.boot.allow_jdbc_metadata_access=false
+
+# Database initialization should typically be performed outside of Spring lifecycle
+spring.jpa.hibernate.ddl-auto=none
+spring.sql.init.mode=never
